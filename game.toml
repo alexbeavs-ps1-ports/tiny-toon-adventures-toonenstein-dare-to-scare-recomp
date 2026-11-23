@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Tiny Toon Adventures - Toonenstein - Dare to Scare!"
+id = "SLUS-00967"
+players = 1
+exe = "disc/SLUS_009.67"
+disc = "disc/Tiny Toon Adventures - Toonenstein - Dare to Scare! (USA).cue"
+discs = ["disc/Tiny Toon Adventures - Toonenstein - Dare to Scare! (USA).cue"]
+disc_serials = ["SLUS-00967"]
+load_address = "0x80010000"
+entry_pc = "0x80037C8C"
+text_size = "0x00044000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Tiny Toon Adventures - Toonenstein - Dare to Scare! (USA) (Track 1).bin"
+cue_name = "Tiny Toon Adventures - Toonenstein - Dare to Scare! (USA).cue"
+boot_exe = "SLUS_009.67"
+known_sizes = [648879168]
+known_md5 = [
+  "838b2d8e0c3b2f77f2a1c4e016d66f8d",
+]
+known_sha1 = [
+  "4ee6a391f55b25e4aad13e7ef409857486158cd9",
+]
+known_crc32 = [
+  "a33c5292",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Tiny Toon Adventures - Toonenstein - Dare to Scare! Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 2
+required_disc_fp = "ebc018d7d8a14230f62e95b9a570c5acd8d39af7c01bd1858378ec3291247127"

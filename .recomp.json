@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Tiny Toon Adventures - Toonenstein - Dare to Scare!",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "tiny-toon-adventures-toonenstein-dare-to-scare-recomp",
+  "original": {
+    "region": "USA",
+    "serial": "SLUS-00967"
+  }
+}

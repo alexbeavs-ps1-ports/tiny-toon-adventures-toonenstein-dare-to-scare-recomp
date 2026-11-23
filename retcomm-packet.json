@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "tiny-toon-adventures-toonenstein-dare-to-scare-psx",
+  "name": "Tiny Toon Adventures - Toonenstein - Dare to Scare!",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "tiny-toon-adventures-toonenstein-dare-to-scare-recomp",
+  "rom_identity": {
+    "crc32": [
+      "a33c5292"
+    ],
+    "md5": [
+      "838b2d8e0c3b2f77f2a1c4e016d66f8d"
+    ],
+    "sha1": [
+      "4ee6a391f55b25e4aad13e7ef409857486158cd9"
+    ],
+    "disc_serials": [
+      "SLUS-00967"
+    ],
+    "sizes": [
+      648879168
+    ],
+    "filenames": [
+      "Tiny Toon Adventures - Toonenstein - Dare to Scare! (USA).cue",
+      "Tiny Toon Adventures - Toonenstein - Dare to Scare! (USA) (Track 1).bin"
+    ],
+    "track_counts": [
+      2
+    ],
+    "disc_fps": [
+      "ebc018d7d8a14230f62e95b9a570c5acd8d39af7c01bd1858378ec3291247127"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/tiny-toon-adventures-toonenstein-dare-to-scare-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "tiny-toon-adventures-toonenstein-dare-to-scare-*-windows-x64.zip",
+      "linux-x64": "tiny-toon-adventures-toonenstein-dare-to-scare-*-linux-x64.zip",
+      "macos-arm64": "tiny-toon-adventures-toonenstein-dare-to-scare-*-macos-arm64.zip",
+      "macos-x64": "tiny-toon-adventures-toonenstein-dare-to-scare-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "tiny_toon_adventures_toonenstein_dare_to_scare.exe",
+    "linux": "tiny_toon_adventures_toonenstein_dare_to_scare",
+    "macos": "tiny_toon_adventures_toonenstein_dare_to_scare"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/tiny-toon-adventures-toonenstein-dare-to-scare-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
